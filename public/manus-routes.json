@@ -1,0 +1,120 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Home"
+    },
+    {
+      "path": "/services",
+      "title": "Browse Services"
+    },
+    {
+      "path": "/services/cleaning",
+      "title": "Home & Office Cleaning"
+    },
+    {
+      "path": "/services/hvac",
+      "title": "Heating & Cooling"
+    },
+    {
+      "path": "/services/plumbing",
+      "title": "Plumbing"
+    },
+    {
+      "path": "/services/electrical",
+      "title": "Electrical"
+    },
+    {
+      "path": "/services/roofing",
+      "title": "Roofing"
+    },
+    {
+      "path": "/services/painting",
+      "title": "Painting"
+    },
+    {
+      "path": "/services/landscaping",
+      "title": "Landscaping & Yard Care"
+    },
+    {
+      "path": "/services/pressure-washing",
+      "title": "Pressure Washing"
+    },
+    {
+      "path": "/services/window-cleaning",
+      "title": "Window Cleaning"
+    },
+    {
+      "path": "/services/carpet-cleaning",
+      "title": "Carpet Cleaning"
+    },
+    {
+      "path": "/services/pest-control",
+      "title": "Pest Control"
+    },
+    {
+      "path": "/services/handyman",
+      "title": "Handyman & Repairs"
+    },
+    {
+      "path": "/services/security",
+      "title": "Security & Protection"
+    },
+    {
+      "path": "/services/auto-repair",
+      "title": "Auto Repair"
+    },
+    {
+      "path": "/services/moving",
+      "title": "Moving & Hauling"
+    },
+    {
+      "path": "/services/photography",
+      "title": "Photography"
+    },
+    {
+      "path": "/services/pets",
+      "title": "Pet Services"
+    },
+    {
+      "path": "/services/events",
+      "title": "Events & Celebrations"
+    },
+    {
+      "path": "/services/health-wellness",
+      "title": "Health & Wellness"
+    },
+    {
+      "path": "/services/legal",
+      "title": "Legal Services"
+    },
+    {
+      "path": "/services/insurance",
+      "title": "Insurance"
+    },
+    {
+      "path": "/services/real-estate",
+      "title": "Real Estate"
+    },
+    {
+      "path": "/services/marketing",
+      "title": "Marketing & Creative"
+    },
+    {
+      "path": "/services/signs-graphics",
+      "title": "Signs & Graphics"
+    },
+    {
+      "path": "/services/community",
+      "title": "Community & Technology"
+    },
+    {
+      "path": "/about",
+      "title": "The Rogue Difference"
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy"
+    }
+  ]
+}

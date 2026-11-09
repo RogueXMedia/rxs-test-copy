@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin</title>
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <main id="admin-page" class="admin-page">
+    <h1>Admin</h1>
+    <p class="admin-lead">Owner sign-in for Tel-a and RogueXServices counts. A missing source stays untracked. It is not shown as zero. Password sign-in does not grant signed-owner bans or deletes.</p>
+    <p class="admin-lead">This page is not indexed. It does not register a service worker.</p>
+    <form id="admin-login" class="admin-login">
+      <label for="admin-username">Username</label>
+      <input id="admin-username" name="username" autocomplete="username" data-testid="admin-username">
+      <label for="admin-password">Password</label>
+      <input id="admin-password" name="password" type="password" autocomplete="current-password" data-testid="admin-password">
+      <label class="admin-check" for="admin-remember">
+        <input id="admin-remember" name="remember" type="checkbox" data-testid="admin-remember">
+        Remember this device for 30 days
+      </label>
+      <button type="submit" data-testid="admin-submit">Sign in</button>
+    </form>
+    <div id="admin-signed" hidden>
+      <div class="admin-actions">
+        <button type="button" id="admin-refresh" data-testid="admin-refresh">Refresh</button>
+        <button type="button" id="admin-logout" data-testid="admin-logout">Log out</button>
+        <button type="button" id="admin-logout-all" data-testid="admin-logout-all">Log out all devices</button>
+      </div>
+      <nav id="admin-pages" aria-label="Tel-a pages" data-testid="admin-pages"></nav>
+      <div id="admin-sites"></div>
+      <div id="admin-table-wrap" class="admin-table" data-testid="admin-table-wrap"></div>
+      <section id="admin-roster" aria-label="Lists" data-testid="admin-roster"></section>
+      <section id="admin-controls" aria-label="Controls" data-testid="admin-controls"></section>
+    </div>
+    <p id="admin-error" class="admin-error" role="alert" data-testid="admin-error" hidden></p>
+  </main>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

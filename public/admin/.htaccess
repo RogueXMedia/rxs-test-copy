@@ -1,0 +1,17 @@
+# This directory only. The parent site indexes index.html and leaves
+# DirectorySlash off. A directory URL with no slash does not select index.php.
+# No proxy and no change to the parent index list.
+<IfModule mod_headers.c>
+  Header always set Cache-Control "private, no-store"
+  Header always set Pragma "no-cache"
+  Header always set X-Robots-Tag "noindex, nofollow"
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+DirectoryIndex index.html index.php
+<IfModule mod_alias.c>
+  RedirectMatch 307 ^/admin$ /admin/
+</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^page/(login|logout-all|logout|board|roster|session)/?$ page/$1/index.php [END]
+</IfModule>

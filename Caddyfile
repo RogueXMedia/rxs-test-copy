@@ -1,0 +1,53 @@
+{
+  admin off
+  auto_https off
+}
+
+:{$PORT:8080} {
+  encode gzip
+
+  header {
+    X-Robots-Tag "noindex, nofollow"
+    X-RXS-Copy "railway-test"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    X-Frame-Options "SAMEORIGIN"
+    Content-Security-Policy "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://roguexservices.com; connect-src 'self' https://tela-api.roguecleaning.org https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com https://tela-web.roguecleaning.org https://dating-rxs-theme.roguex.workers.dev https://games-rxs-preview.roguex.workers.dev; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    -Server
+  }
+
+  @php path *.php /rx-market-photo.php /rx-e.php
+  handle @php {
+    header Content-Type application/json
+    header Cache-Control no-store
+    respond 501 {
+      body "{\"ok\":false,\"error\":\"php_stubbed_on_railway_test_copy\",\"message\":\"Write endpoints are disabled on this RXS Railway test copy.\"}"
+    }
+  }
+
+  @blocked path_regexp blocked ^/(manage|portal-api|directory-data|portal)(/|$)
+  handle @blocked {
+    respond 404
+  }
+
+  redir /privacy-policy /privacy/ 301
+  redir /privacy-policy.html /privacy/ 301
+  redir /privacy-policy/ /privacy/ 301
+
+  handle {
+    root * /srv/public
+    try_files {path} {path}/index.html /404.html
+    file_server
+  }
+
+  handle_errors {
+    root * /srv/public
+    rewrite * /404.html
+    file_server
+  }
+
+  log {
+    output stdout
+    format console
+  }
+}
